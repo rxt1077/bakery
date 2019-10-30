@@ -1,6 +1,6 @@
-<b>These cookies are available:</a>
+<b>These cookies are available:</b>
 <ul>
 {% for cookie in cookies %}
-    <li>${{ cookie.price }} - {{ cookie.cookie_type }}</li>
+    <li>${{ cookie.price }} - {{ cookie.cookie_type }} - Nut Free? {{ cookie.nut_free }}</li>
 {% endfor %}
 </ul>
