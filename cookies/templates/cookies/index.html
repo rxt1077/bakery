@@ -1,8 +1,34 @@
 {% load static %}
-<img src="{% static 'cookies/cookie.jpg' %}">
-<b>These cookies are available:</b>
-<ul>
-{% for cookie in cookies %}
-    <li>${{ cookie.price }} - {{ cookie.cookie_type }} - Nut Free? {{ cookie.nut_free }}</li>
-{% endfor %}
-</ul>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Cookies for Sale!</title>
+  </head>
+  <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<img src="{% static 'cookies/cookie.jpg' %}" width="200" height="200">
+			</div>
+		</div>
+		<div class="row">
+			<b>These cookies are available:</b>
+		</div>
+	</div>
+	
+	
+	<ul>
+	{% for cookie in cookies %}
+		<li>${{ cookie.price }} - {{ cookie.cookie_type }} - Nut Free? {{ cookie.nut_free }}</li>
+	{% endfor %}
+	</ul>  
+  </body>
+</html>
+
